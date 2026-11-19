@@ -14,6 +14,29 @@ The goal of this programming project is to investigate whether existing image de
 
 Students will develop a system that integrates vector embeddings, vector database retrieval, and RAG to explore this question.
 
+## Thought and Action Process
+
+1. I was not familier with how RAG is used for images and specially to niche domains. So, I gave the following prompt to Claude 5.5 (Thinking: Extra) to better understand the overall picture.
+"Do a deep research on ways and ideas on how we can apply a RAG architecture for a niche domain where we have images and we need to answer various questions about the images. Give additional insights or ideas on using dino v3 or diffusion models or adaptive RAG or vector database indexes in such a system"
+
+I was previously fascinated by how good dino v3 is and some usage of diffusion models and use of RAG when needed. I wanted to use those so I included them in the prompt.
+
+It created a document which I have exported here as a markdown file. (Link)
+
+The document is a pain to read but it gave me some good insights and some relevant papers.
+
+2. I then asked Claude 5.5 (Thinking: Medium) to give me some more insights about pathology as I felt I need to understand more about it to start.
+
+It created another document which I have exported here as a markdown file. (Link)
+
+The document is much shorter but was a bit difficult to understand. So I prompted it to add some primer about pathology for those who are not familier.
+
+"for me the Retrieval in computational pathology: tasks and datasets. is too hard to understand as I am not from a medical background for example what are WSI, patch images or corpora difference between image text corpora? are the VQA images and image-text corpora images same? do all datasets contain same type of pathology images? can I use another as a retrieval dataset for another? A lot of questions"
+
+3. I got interested in the PathRAG paper listed in the documents. I read the paper and got to know how they used cell graph to better generate answers. However, their title is a little misleading as they do not use any retrieval instead they use an expert model.
+
+4. Right now my goal is to use the cell graph to retrieve similar images in the training portion and use their Question and Answers as descriptions to give the model.
+
 ## Suggested Resources
 
 **Dataset: PathVQA**
